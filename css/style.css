@@ -366,10 +366,10 @@ a {
   color: var(--color-primary);
 }
 
-a:hover {
+/*a:hover {
   color: var(--color-primary-dark);
 }
-
+*/
 a:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
@@ -459,4 +459,29 @@ a:focus-visible {
 
 [aria-invalid="true"] {
   border-color: var(--color-danger);
+}
+
+.breadcrumbs {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-md);
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.breadcrumbs a {
+  color: var(--color-primary);
+}
+
+.breadcrumbs span::before {
+  content: " / ";
+  color: var(--color-muted);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:target {
+  outline: 2px dashed var(--color-primary);
+  outline-offset: 4px;
 }
